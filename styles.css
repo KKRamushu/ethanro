@@ -1,0 +1,144 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root{
+  --primary-color: #271627;
+  --primary-color-lite: #6b476b;
+  --secondary-color: rgb(14, 29, 14);
+  --text-color: rgb(212, 212, 212);
+  --primary-shadow: rgba(19, 32, 19, 0.502);
+  --secondary-shadow: rgba(40, 26, 40, 0.7);
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0px;
+  background-image: url('https://images.pexels.com/photos/1406863/pexels-photo-1406863.jpeg?auto=compress&cs=tinysrgb&w=600');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat; 
+  overflow: hidden;
+}
+
+a{
+  margin: 10px;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  overflow-y: auto;
+  
+}
+
+.nav-bar{
+  position: absolute;
+  top: 50px;
+  width: 99%;
+  height: 60px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  box-shadow: -2px 15px 10px var(--primary-shadow) ;
+  z-index: 10;
+}
+
+.nav-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: flex-end;
+  width: auto;
+  height: 50px;
+  margin-right: 70px;
+}
+
+.logo-image{
+  font-family: "Sofia", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  margin-right: 45%;
+  color: var(--text-color);
+}
+
+.products{
+  position: relative;
+  width: 90%;
+  height: 60vh;
+  top: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+  margin: auto;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: var(--primary-color-lite);
+  box-shadow: -3px 10px 25px var(--secondary-shadow);
+  overflow-x: hidden;
+  opacity: 100%;
+}
+
+figure{
+  width: 100%;
+  height: 55vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+  
+}
+
+.product-card{
+  position: relative;
+  min-width: 20%;
+  height: 100%;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-width: 5px;
+  border-color: rgba(0, 0, 0, 1);
+  box-shadow: var(--secondary-shadow);
+}
+
+.img-div, .info-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.img-div{
+  width: 100%;
+  height: 250px;
+}
+
+.product-img{
+  max-width: 100%;
+  max-height: 250px;
+}
+
+.info-div{
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.product-title, .description, .product-price, small{
+  margin: 5px;
+  padding: 0px;
+  color: var(--text-color);
+}
