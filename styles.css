@@ -86,7 +86,7 @@ a{
   background-color: var(--primary-color-lite);
   box-shadow: -3px 10px 25px var(--secondary-shadow);
   overflow-x: hidden;
-  opacity: 100%;
+  background-image: url('https://img.freepik.com/free-vector/gradient-background-with-bokeh-effect_23-2148363158.jpg?w=740&t=st=1722111669~exp=1722112269~hmac=16a7fa8789bad865ebdcb2d6b5721164fdd8522ce70d1daab55c122385cf5d1a');
 }
 
 figure{
@@ -103,30 +103,32 @@ figure{
   position: relative;
   min-width: 20%;
   height: 100%;
-  margin: 5px;
-  padding: 1px;
+  margin: 4px;
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.1);
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-left: 2px solid rgba(255, 255, 255, 0.5);
   border-bottom: 2px solid rgba(255, 255, 255, 0.5);
-  box-shadow: var(--primary-shadow);
+  box-shadow: 0 30px 15px 20px rgba(0, 0, 0, 0.411);
 }
 
 .img-div, .info-div{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: auto;
   border-radius: 5px;
 }
 
 .img-div{
-  width: 100%;
+  width: 220px;
   height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .product-img{
-  max-width: 100%;
+  max-width: 220px;
   max-height: 250px;
 }
 
