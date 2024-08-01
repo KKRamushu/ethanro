@@ -21,6 +21,7 @@ body {
   background-position: center;
   background-repeat: no-repeat; 
   overflow: hidden;
+  z-index: 0;
 }
 
 a{
@@ -31,12 +32,21 @@ a{
 
 .container {
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  position: relative;
   top: 0px;
   left: 0px;
-  position: absolute;
-  overflow-y: auto;
+  overflow-y: hidden;
   
+}
+
+.container-page2{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  top: 100vh;
+  left: 0px;
+  overflow-y: hidden;
 }
 
 .nav-bar{
@@ -113,6 +123,14 @@ a{
   background-color: var(--primary-color);
   border: 0;
   cursor: pointer;
+}
+
+.pages{
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+  overflow-y: auto;
+  z-index: 1;
 }
 
 .welcome-note-div{
