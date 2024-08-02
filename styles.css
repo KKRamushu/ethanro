@@ -62,7 +62,7 @@ a{
   
 }
 
-.container-page2, .container-page3{
+.container-page2, .container-page3, .container-page4{
   width: 100%;
   height: 100vh;
   display: flex;
@@ -75,6 +75,10 @@ a{
 
 .container-page3{
   background: #94b9ff;
+}
+
+.container-page4{
+  background: #76fdc9;
 }
 
 .nav-bar{
@@ -317,6 +321,7 @@ figure{
 
 .discount{
   text-decoration: line-through;
+  color: #fc5a3d;
 }
 
 .contacts-bar{
