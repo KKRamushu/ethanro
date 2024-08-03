@@ -35,8 +35,13 @@ body {
   z-index: 0;
 }
 
-a{
+.nav-link, .media-img{
   margin: 10px;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+a{
   text-decoration: none;
   color: var(--text-color);
 }
@@ -346,7 +351,7 @@ figure{
   position: absolute;
   bottom: 15px;
   right: 50px;
-  width: 270x;
+  width: 270px;
   height: 35px;
   background: rgba(255, 255, 255, 0.1);
   border: 2px solid rgba(255, 255, 255, 0.2);
