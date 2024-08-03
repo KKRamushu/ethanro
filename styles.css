@@ -1,11 +1,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Nanum+Pen+Script&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root{
   --primary-color: #271627;
   --primary-color-lite: #6b476b;
   --secondary-color: rgb(14, 29, 14);
-  --text-color: rgb(212, 212, 212);
+  --text-color: rgb(255, 204, 204);
   --primary-shadow: rgba(19, 32, 19, 0.502);
   --secondary-shadow: rgba(40, 26, 40, 0.7);
 }
@@ -178,15 +179,16 @@ a{
   width: 90%;
   height: 50px;
   margin: 20px 10px 5px 10px;
-  font-weight: 100;
-  font-style: italic;
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
 }
 
 .new-note, .spacial-note{
 
   margin: auto;
   font-weight: bold;
-  font-size: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -242,8 +244,7 @@ figure{
   width: 100%;
   height: 55vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   flex-flow: row;
   
 }
@@ -254,6 +255,8 @@ figure{
   height: 100%;
   margin: 4px;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
   background: rgba(255, 255, 255, 0.1);
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-left: 2px solid rgba(255, 255, 255, 0.5);
@@ -264,6 +267,18 @@ figure{
 
 .new-product-card{
   min-width: 30%;
+}
+
+.about-us-card{
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 5px;
+  text-align: center;
+  color: var(--text-color);
+  backdrop-filter: blur(10px);
 }
 
 .img-div, .info-div{
