@@ -433,6 +433,7 @@ figure{
 .glass-button{
   width: 150px;
   height: 45px;
+  margin: 5px;
   background: rgba(255, 255, 255, 0.1);
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-left: 2px solid rgba(255, 255, 255, 0.5);
@@ -466,7 +467,20 @@ figure{
 
 .product-cart-button{
   height: 35px;
+  margin: 5px;
   border: 2px solid rgba(252, 90, 61, 0.2);
   border-left: 2px solid rgba(252, 90, 61, 0.5);
   border-bottom: 2px solid rgba(252, 90, 61, 0.5);
+}
+
+.cart-view-options{
+  position: relative;
+  margin-top: auto;
+  width: 20%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--text-color);
 }
