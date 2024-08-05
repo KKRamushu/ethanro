@@ -9,6 +9,7 @@
   --text-color: rgb(255, 204, 204);
   --primary-shadow: rgba(19, 32, 19, 0.502);
   --secondary-shadow: rgba(40, 26, 40, 0.7);
+  --glass-button-hover: rgb(0, 174, 255, 0.5);
 }
 
 ::-webkit-scrollbar-track{
@@ -444,6 +445,9 @@ figure{
   color: var(--text-color);
   cursor: pointer;
 }
+.glass-button:hover{
+  background: var(--glass-button-hover);
+}
 
 /*******************************Cart page ********************************/
 
@@ -467,10 +471,17 @@ figure{
 
 .product-cart-button{
   height: 35px;
+  width: 100px;
   margin: 5px;
   border: 2px solid rgba(252, 90, 61, 0.2);
   border-left: 2px solid rgba(252, 90, 61, 0.5);
   border-bottom: 2px solid rgba(252, 90, 61, 0.5);
+}
+.product-cart-button:hover{
+  background-color: rgba(252, 90, 61, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .cart-view-options{
