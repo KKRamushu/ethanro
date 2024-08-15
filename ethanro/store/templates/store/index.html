@@ -1,58 +1,5 @@
-<!DOCTYPE html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-  <title>Ethanro</title>
-</head>
-<body>
-
-  <div class="nav-bar">
-    <div class="logo-image"><h1>ethanro.</h1></div>
-    <div class="search-div">
-      <form class="search-form" action="" method="post">
-        <input class="seach-text-input" type="text" name="search" id="">
-        <button class="search-button" type="submit"><img class="search-icon" src="https://cdn-icons-png.flaticon.com/128/10469/10469570.png" alt=""></button>
-      </form>
-    </div>
-    <div class="nav-links">
-      <a href="index.html#home" class="nav-link">Home</a>
-      <a href="index.html#new" class="nav-link">New</a>
-      <a href="index.html#spacial" class="nav-link">Special</a>
-      <a href="cart.html" class="nav-link">Cart</a>
-      <a href="index.html#about-us" class="nav-link">about us</a>
-    </div>
-  </div>
-
-  <div class="contacts-bar">
-    <a href="" class="nav-link">
-      <div class="media-img">
-        <img class="media-img icon" src="https://cdn-icons-png.flaticon.com/128/11516/11516211.png" alt="">
-      </div>
-    </a>
-    <a href="" class="nav-link">
-      <div class="media-img">
-        <img class="media-img icon" src="https://cdn-icons-png.flaticon.com/128/2504/2504903.png" alt="">
-      </div>
-    </a>
-    <a href="" class="nav-link">
-      <div class="media-img">
-        <img class="media-img icon" src="https://cdn-icons-png.flaticon.com/128/15707/15707820.png" alt="">
-      </div>
-    </a>
-    <a href="" class="nav-link">
-      <div class="media-img">
-        <img class="media-img icon" src="https://cdn-icons-png.flaticon.com/128/1409/1409946.png" alt="">
-      </div>
-    </a>
-    <a href="" class="nav-link">
-      <div class="media-img" >
-        <img class="media-img icon" src="https://cdn-icons-png.flaticon.com/128/733/733585.png" alt="">
-      </div>
-    </a>
-  </div>
+{% extends "store/layout.html" %}
+{% block body %}
 
   <div class="pages">
     <div class="container" id="home">
@@ -65,32 +12,22 @@
       
       <div class="products">
         <figure>
-          <a href="product.html">
-            <div class="product-card" id="card1">
-              <div class="img-div">
-                <img src="https://handbag-asia.com/wp-content/uploads/2017/08/handmade-soap.jpg" alt="" class="product-img">
+          {% for product in products %}
+            <a href="product.html">
+              <div class="product-card">
+                <div class="img-div">
+                  <img src="{{product.imageUrl}}" class="product-img">
+                </div>
+                <div class="info-div">
+                  <h4 class="product-title"> {{product.title}}</h4>
+                  <small class="description">{{product.discription}}</small>
+                  <h4 class="product-price">{{product.price}}</h4>
+                </div>
               </div>
-              <div class="info-div">
-                <h4 class="product-title"> Protex</h4>
-                <small class="description">Protex hygen bath soap bar</small>
-                <h4 class="product-price">R35,90</h4>
-              </div>
-            </div>
-          </a>
-          
-          <a href="product.html">
-            <div class="product-card" id="card2">
-              <div class="img-div">
-                <img src="https://th.bing.com/th/id/R.b3ba8c545491db56719f349e2d38893c?rik=c7fwSkc2TMadiw&riu=http%3a%2f%2fwww.lovinsoap.com%2fwp-content%2fuploads%2f2016%2f01%2fbenefits-of-using-handmade-soap-1024x1024.jpg&ehk=rOBE96SfBSGNfXlkHNighDHUiVNJNq7IunYiebugbkw%3d&risl=&pid=ImgRaw&r=0" alt="" class="product-img">
-              </div>
-              <div class="info-div">
-                <h4 class="product-title"> Protex</h4>
-                <small class="description">Protex hygen bath soap bar</small>
-                <h4 class="product-price">R35,90</h4>
-              </div>
-            </div>
-          </a>
-          
+            </a>
+          {% endfor %}
+
+          <!--
           <a href="product.html">
             <div class="product-card" id="card3">
               <div class="img-div">
@@ -129,6 +66,7 @@
               </div>
             </div>
           </a>
+        -->
         </figure>
       </div>
     </div>
@@ -245,12 +183,11 @@
             <h4>Contact no:</h4>
             <p>012 555 3754</p>
             <h4>Founder</h4>
-            <p>Rhofiwa Madubva</p>
+            <p>Rhofiwa</p>
           </div>
         </figure>
       </div>
     </div>
   </div>
   
-</body>
-</html>
+{% endblock %}

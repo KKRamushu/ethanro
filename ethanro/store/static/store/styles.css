@@ -257,7 +257,7 @@ figure{
 
 .product-card, .new-product-card{
   position: relative;
-  min-width: 20%;
+  max-width: 280px;
   height: 100%;
   margin: 4px;
   border-radius: 5px;
