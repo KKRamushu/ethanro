@@ -10,3 +10,7 @@ from .models import Product
 def index(request):
   products = Product.objects.all()
   return render(request, "store/index.html",{"products":products})
+
+def product(request, item):
+  product = Product.objects.get(title=item)
+  return render(request, "store/product.html",{"product": product})

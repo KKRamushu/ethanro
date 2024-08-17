@@ -13,7 +13,7 @@
       <div class="products">
         <figure>
           {% for product in products %}
-            <a href="product.html">
+            <a href="{% url 'product' item=product.title %}">
               <div class="product-card">
                 <div class="img-div">
                   <img src="{{product.imageUrl}}" class="product-img">
@@ -21,94 +21,38 @@
                 <div class="info-div">
                   <h4 class="product-title"> {{product.title}}</h4>
                   <small class="description">{{product.discription}}</small>
-                  <h4 class="product-price">{{product.price}}</h4>
+                  <h4 class="product-price">R{{product.price}}</h4>
                 </div>
               </div>
             </a>
           {% endfor %}
-
-          <!--
-          <a href="product.html">
-            <div class="product-card" id="card3">
-              <div class="img-div">
-                <img src="https://th.bing.com/th/id/R.2f3199f98812270da13300d5823e0bfa?rik=rN3YIhjvmPuBOQ&riu=http%3a%2f%2fwww.mireiodesigns.com%2fwp-content%2fuploads%2f2011%2f05%2fblushie.jpg&ehk=l%2fEYDLqKLiFoQRrKk3oBEBuATK7feQVojnD4xCYAQ28%3d&risl=&pid=ImgRaw&r=0" alt="" class="product-img">
-              </div>
-              <div class="info-div">
-                <h4 class="product-title"> Protex</h4>
-                <small class="description">Protex hygen bath soap bar</small>
-                <h4 class="product-price">R35,90</h4>
-              </div>
-            </div>
-          </a>
-          
-          <a href="product.html">
-            <div class="product-card" id="card5">
-              <div class="img-div">
-                <img src="https://th.bing.com/th/id/OIP.RaJfetx5_XDv6TWx9_hz0gHaFL?w=1430&h=1000&rs=1&pid=ImgDetMain" alt="" class="product-img">
-              </div>
-              <div class="info-div">
-                <h4 class="product-title"> Protex</h4>
-                <small class="description">Protex hygen bath soap bar</small>
-                <h4 class="product-price">R35,90</h4>
-              </div>
-            </div>
-          </a>
-          
-          <a href="product.html">
-            <div class="product-card" id="card3">
-              <div class="img-div">
-                <img src="https://th.bing.com/th/id/R.2f3199f98812270da13300d5823e0bfa?rik=rN3YIhjvmPuBOQ&riu=http%3a%2f%2fwww.mireiodesigns.com%2fwp-content%2fuploads%2f2011%2f05%2fblushie.jpg&ehk=l%2fEYDLqKLiFoQRrKk3oBEBuATK7feQVojnD4xCYAQ28%3d&risl=&pid=ImgRaw&r=0" alt="" class="product-img">
-              </div>
-              <div class="info-div">
-                <h4 class="product-title"> Protex</h4>
-                <small class="description">Protex hygen bath soap bar</small>
-                <h4 class="product-price">R35,90</h4>
-              </div>
-            </div>
-          </a>
-        -->
         </figure>
       </div>
     </div>
+
+<!--PAGE 2-->
+
     <div class="container-page2" id="new">
       <div class="new-products">
         <figure>
-          <div class="new-product-card" id="card1">
-            <div class="img-div">
-              <div class="new-sticker"><img src="https://e7.pngegg.com/pngimages/799/923/png-clipart-kochers-computer-icons-new-label-leaf-text-thumbnail.png" alt="" class="sticker"></div>
-              <img src="https://handbag-asia.com/wp-content/uploads/2017/08/handmade-soap.jpg" alt="" class="product-img">
+          {% for product in products %}
+          <a href="{% url 'product' item=product.title %}">
+            <div class="new-product-card" id="card1">
+              <div class="img-div">
+                <div class="new-sticker"><img src="https://e7.pngegg.com/pngimages/799/923/png-clipart-kochers-computer-icons-new-label-leaf-text-thumbnail.png" alt="" class="sticker"></div>
+                <img src="{{product.imageUrl}}" alt="" class="product-img">
+              </div>
+              <div class="info-div">
+                <h4 class="product-title"> {{product.title}}</h4>
+                <small class="description">{{product.discription}}</small>
+                <h4 class="product-price">R{{product.price}}</h4>
+              </div>
             </div>
-            <div class="info-div">
-              <h4 class="product-title"> Protex</h4>
-              <small class="description">Protex hygen bath soap bar</small>
-              <h4 class="product-price">R35,90</h4>
-            </div>
-          </div>
-          <div class="new-product-card" id="card3">
-            <div class="img-div">
-              <div class="new-sticker"><img src="https://e7.pngegg.com/pngimages/799/923/png-clipart-kochers-computer-icons-new-label-leaf-text-thumbnail.png" alt="" class="sticker"></div>
-              <img src="https://th.bing.com/th/id/R.2f3199f98812270da13300d5823e0bfa?rik=rN3YIhjvmPuBOQ&riu=http%3a%2f%2fwww.mireiodesigns.com%2fwp-content%2fuploads%2f2011%2f05%2fblushie.jpg&ehk=l%2fEYDLqKLiFoQRrKk3oBEBuATK7feQVojnD4xCYAQ28%3d&risl=&pid=ImgRaw&r=0" alt="" class="product-img">
-            </div>
-            <div class="info-div">
-              <h4 class="product-title"> Protex</h4>
-              <small class="description">Protex hygen bath soap bar</small>
-              <h4 class="product-price">R35,90</h4>
-            </div>
-          </div>
-          <div class="new-product-card" id="card4">
-            <div class="img-div">
-              <div class="new-sticker"><img src="https://e7.pngegg.com/pngimages/799/923/png-clipart-kochers-computer-icons-new-label-leaf-text-thumbnail.png" alt="" class="sticker"></div>
-              <img src="https://sarahblooms.com/wp-content/uploads/2017/11/DIY-spiced-soap-for-men-tutorial-1.jpg" alt="" class="product-img">
-            </div>
-            <div class="info-div">
-              <h4 class="product-title"> Protex</h4>
-              <small class="description">Protex hygen bath soap bar</small>
-              <h4 class="product-price">R35,90</h4>
-            </div>
-          </div>
-          
+          </a>
+          {% endfor %}
         </figure>
       </div>
+
       <div class="new-note-div">
         <p class="new-note">
           We're thrilled to introduce our latest creations, designed to elevate your bathing routine to new heights. <br>
@@ -118,6 +62,8 @@
       </div>
 
     </div>
+
+<!--PAGE 3-->
 
     <div class="container-page3" id="spacial">
       <div class="spacial-note-div">
@@ -167,6 +113,8 @@
         </figure>
       </div>
     </div>
+
+    <!--PAGE 4-->
 
     <div class="container-page4" id="about-us">
       <div class="new-products">
