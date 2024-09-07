@@ -11,22 +11,27 @@
       </div>
       
       <div class="products">
-        <figure>
-          {% for product in products %}
-            <a href="{% url 'product' item=product.title %}">
-              <div class="product-card">
-                <div class="img-div">
-                  <img src="{{product.imageUrl}}" class="product-img">
+        <button class="slider-buttons prev">prev</button>
+        <div class="slider-holder">
+          <figure class="slide-track">
+            {% for product in products %}
+              <a href="{% url 'product' item=product.title %}">
+                <div class="product-card">
+                  <div class="img-div">
+                    <img src="{{product.imageUrl}}" class="product-img">
+                  </div>
+                  <div class="info-div">
+                    <h4 class="product-title"> {{product.title}}</h4>
+                    <small class="description">{{product.discription}}</small>
+                    <h4 class="product-price">R{{product.price}}</h4>
+                  </div>
                 </div>
-                <div class="info-div">
-                  <h4 class="product-title"> {{product.title}}</h4>
-                  <small class="description">{{product.discription}}</small>
-                  <h4 class="product-price">R{{product.price}}</h4>
-                </div>
-              </div>
-            </a>
-          {% endfor %}
-        </figure>
+              </a>
+            {% endfor %}
+          </figure>
+        </div>
+        
+        <button class="slider-buttons nxt">next</button>
       </div>
     </div>
 
