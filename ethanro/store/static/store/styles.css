@@ -356,6 +356,11 @@ figure{
   color: var(--text-color);
 }
 
+.description{
+  max-height: 30px;
+  overflow: hidden;
+}
+
 .discount{
   text-decoration: line-through;
   color: #fc5a3d;

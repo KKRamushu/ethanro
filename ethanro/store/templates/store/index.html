@@ -40,7 +40,7 @@
     <div class="container-page2" id="new">
       <div class="new-products">
         <figure>
-          {% for product in products %}
+          {% for product in products|slice:"0:3" %}
           <a href="{% url 'product' item=product.title %}">
             <div class="new-product-card" id="card1">
               <div class="img-div">
