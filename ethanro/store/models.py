@@ -9,3 +9,9 @@ class Product(models.Model):
   price = models.FloatField(max_length=8)
   def __str__(self):
       return f"{self.title}"
+
+  def __iter__(self):
+      yield ('imageUrl', self.imageUrl)
+      yield ('title', self.title)
+      yield ('description', self.discription)
+      yield ('price', self.price)

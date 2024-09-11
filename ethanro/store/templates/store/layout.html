@@ -14,8 +14,9 @@
   <div class="nav-bar">
     <div class="logo-image"><a href="{% url 'index' %}#home"><h1>ethanro.</h1></a></div>
     <div class="search-div">
-      <form class="search-form" action="" method="post">
-        <input class="seach-text-input" type="text" name="search" id="">
+      <form class="search-form" action="{% url 'search' %}" method="POST">
+        {% csrf_token %}
+        <input class="seach-text-input" type="text" name="search" id="key-word">
         <button class="search-button" type="submit"><img class="search-icon" src="https://cdn-icons-png.flaticon.com/128/10469/10469570.png" alt=""></button>
       </form>
     </div>
@@ -23,7 +24,7 @@
       <a href="{% url 'index' %}#home" class="nav-link">Home</a>
       <a href="{% url 'index' %}#new" class="nav-link">New</a>
       <a href="{% url 'index' %}#spacial" class="nav-link">Special</a>
-      <a href="cart.html" class="nav-link">Cart</a>
+      <a href="" class="nav-link">Cart</a>
       <a href="{% url 'index' %}#about-us" class="nav-link">about us</a>
     </div>
   </div>
