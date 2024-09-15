@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
 # Create your models here.
 
@@ -10,8 +11,5 @@ class Product(models.Model):
   def __str__(self):
       return f"{self.title}"
 
-  def __iter__(self):
-      yield ('imageUrl', self.imageUrl)
-      yield ('title', self.title)
-      yield ('description', self.discription)
-      yield ('price', self.price)
+class Cart(models.Model):
+   cartItem = models.ForeignKey(Product, on_delete=models.CASCADE, null=True, blank=True, related_name="product")

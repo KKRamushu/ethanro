@@ -1,3 +1,4 @@
+{% extends "store/layout.html" %}
 {%block body%}
   <div class="pages">
     
@@ -5,14 +6,21 @@
       <div class="container-product">
         <figure>
           <div class="product-card product-view-card">
-            <div class="product-cart-item">
-              <img src="https://handbag-asia.com/wp-content/uploads/2017/08/handmade-soap.jpg" alt="" class="product-cart-img">
-              <h4 class="product-cart-title">Lavender bar</h4>
-              <h4 class="product-cart-price">R28.95</h4>
-              <form action="">
-                <input type="submit" class="product-cart-button glass-button" value="remove">
-              </form>
-            </div>
+            {% if cartItems %}
+            
+              {% for product in cartItems %}
+              <div class="product-cart-item">
+                <img src="{{product.imageUrl}}" alt="" class="product-cart-img">
+                <h4 class="product-cart-title">{{product.title}}</h4>
+                <h4 class="product-cart-price">R{{product.price}}</h4>
+                <form action="">
+                  <input type="submit" class="product-cart-button glass-button" value="remove">
+                </form>
+              </div>
+              {% endfor %}
+            {% else %}
+              <h6>Cart is empty</h6>
+            {% endif %}
           </div>
           <div class="product-card cart-view-options">
             <h4>items: 1</h4>

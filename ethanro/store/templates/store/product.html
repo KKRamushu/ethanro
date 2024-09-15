@@ -1,6 +1,7 @@
 {% extends "store/layout.html" %}
 {% block body %}
 <div class="product-page-container">
+  <p>{{product.id}}</p>
   <div class="container-product">
     <figure>
       <div class="product-card product-view-card">
@@ -11,7 +12,9 @@
           <h3 class="product-title"> {{product.title}}</h3>
           <small class="description">{{product.discription}}</small>
           <h4 class="product-price">R{{product.price}}</h4>
-          <form action="">
+          <form action="{% url 'addToCart' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="item" value="{{product.id}}">
             <input type="submit" class="glass-button" value="Add to cart">
           </form>
         </div>
