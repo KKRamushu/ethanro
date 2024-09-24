@@ -44,6 +44,15 @@ def addToCart(request):
     cartItems = Cart.objects.all()
     return render(request, "store/cart.html", {"cartItems":cartItems}) 
 
+def removeFromCart(request):
+  if request.mathod == "POST":
+    item = request.POST["item"]
+    itemToRemove = Cart.objects.get(id=item)
+    itemToRemove.delete()
+    cartItems = Cart.objects.all()
+    return render(request, "store/cart.html", {"cartItems":cartItems}) 
+
+
 def cart(request):
   items = Cart.objects.all()
   cartItems = []

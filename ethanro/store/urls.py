@@ -6,5 +6,6 @@ urlpatterns =[
   path("<str:item>", views.product, name="product"),
   path("store/", views.search, name="search"),
   path("", views.addToCart, name="addToCart"),
-  path("cart/", views.cart, name="cart")
+  path("cart/", views.cart, name="cart"),
+  path("cart/", views.removeFromCart, name="remove")
 ]

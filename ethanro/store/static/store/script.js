@@ -36,4 +36,18 @@ document.addEventListener('DOMContentLoaded', ()=>{
       sliderScroll();
     }
   });
+
+  const menu = document.querySelector(".menu-div");
+  const hamMenu = document.querySelector('.menu');
+
+  function showMenu(){
+    if(menu.style.display !='none'){
+      menu.style.display ='none';
+    }
+    else{
+      menu.style.display ='block';
+    }
+  }
+
+  hamMenu.addEventListener('click',showMenu);
 });

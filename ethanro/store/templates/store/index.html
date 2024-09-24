@@ -39,23 +39,25 @@
 
     <div class="container-page2" id="new">
       <div class="new-products">
-        <figure>
-          {% for product in products|slice:"0:3" %}
-          <a href="{% url 'product' item=product.title %}">
-            <div class="new-product-card" id="card1">
-              <div class="img-div">
-                <div class="new-sticker"><img src="https://e7.pngegg.com/pngimages/799/923/png-clipart-kochers-computer-icons-new-label-leaf-text-thumbnail.png" alt="" class="sticker"></div>
-                <img src="{{product.imageUrl}}" alt="" class="product-img">
+        <div class="slider-holder">
+          <figure class="slide-track">
+            {% for product in products|slice:"0:3" %}
+            <a href="{% url 'product' item=product.title %}">
+              <div class="new-product-card" id="card1">
+                <div class="img-div">
+                  <div class="new-sticker"><img src="https://e7.pngegg.com/pngimages/799/923/png-clipart-kochers-computer-icons-new-label-leaf-text-thumbnail.png" alt="" class="sticker"></div>
+                  <img src="{{product.imageUrl}}" alt="" class="product-img">
+                </div>
+                <div class="info-div">
+                  <h4 class="product-title"> {{product.title}}</h4>
+                  <small class="description">{{product.discription}}</small>
+                  <h4 class="product-price">R{{product.price}}</h4>
+                </div>
               </div>
-              <div class="info-div">
-                <h4 class="product-title"> {{product.title}}</h4>
-                <small class="description">{{product.discription}}</small>
-                <h4 class="product-price">R{{product.price}}</h4>
-              </div>
-            </div>
-          </a>
-          {% endfor %}
-        </figure>
+            </a>
+            {% endfor %}
+          </figure>
+        </div>
       </div>
 
       <div class="new-note-div">
@@ -75,47 +77,49 @@
         <p class="spacial-note">
           At Ethanro, we believe everyone deserves a little something extra.
           That's why we're excited to offer you exclusive discounts on our premium products.
-          Whether you're a returning customer or new to our store, there's a deal waiting just for you!
         </p>
       </div>
-      <div class="new-products">
-        <figure>
-          <div class="new-product-card" id="card1">
-            <div class="img-div">
-              <div class="new-sticker"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7luQKWB_qzBxak9n193nqhinv-ZDYuR9Ecw&s" alt="" class="sticker"></div>
-              <img src="https://handbag-asia.com/wp-content/uploads/2017/08/handmade-soap.jpg" alt="" class="product-img">
+      <div class="special-products">
+        <div class="slider-holder">
+          <figure class="slide-track">
+            <div class="new-product-card" id="card1">
+              <div class="img-div">
+                <div class="new-sticker"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7luQKWB_qzBxak9n193nqhinv-ZDYuR9Ecw&s" alt="" class="sticker"></div>
+                <img src="https://handbag-asia.com/wp-content/uploads/2017/08/handmade-soap.jpg" alt="" class="product-img">
+              </div>
+              <div class="info-div">
+                <h4 class="product-title"> Protex</h4>
+                <small class="description">Protex hygen bath soap bar</small>
+                <div><h4 class="discount">was R35,90</h4> <h4 class="product-price">now R25,90</h4> </div>
+              </div>
             </div>
-            <div class="info-div">
-              <h4 class="product-title"> Protex</h4>
-              <small class="description">Protex hygen bath soap bar</small>
-              <div><h4 class="discount">was R35,90</h4> <h4 class="product-price">now R25,90</h4> </div>
+            <div class="new-product-card" id="card3">
+              <div class="img-div">
+                <div class="new-sticker"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7luQKWB_qzBxak9n193nqhinv-ZDYuR9Ecw&s" alt="" class="sticker"></div>
+                <img src="https://th.bing.com/th/id/R.2f3199f98812270da13300d5823e0bfa?rik=rN3YIhjvmPuBOQ&riu=http%3a%2f%2fwww.mireiodesigns.com%2fwp-content%2fuploads%2f2011%2f05%2fblushie.jpg&ehk=l%2fEYDLqKLiFoQRrKk3oBEBuATK7feQVojnD4xCYAQ28%3d&risl=&pid=ImgRaw&r=0" alt="" class="product-img">
+              </div>
+              <div class="info-div">
+                <h4 class="product-title"> Protex</h4>
+                <small class="description">Protex hygen bath soap bar</small>
+                <div><h4 class="discount">was R35,90</h4> <h4 class="product-price">now R25,90</h4> </div>
+              </div>
             </div>
-          </div>
-          <div class="new-product-card" id="card3">
-            <div class="img-div">
-              <div class="new-sticker"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7luQKWB_qzBxak9n193nqhinv-ZDYuR9Ecw&s" alt="" class="sticker"></div>
-              <img src="https://th.bing.com/th/id/R.2f3199f98812270da13300d5823e0bfa?rik=rN3YIhjvmPuBOQ&riu=http%3a%2f%2fwww.mireiodesigns.com%2fwp-content%2fuploads%2f2011%2f05%2fblushie.jpg&ehk=l%2fEYDLqKLiFoQRrKk3oBEBuATK7feQVojnD4xCYAQ28%3d&risl=&pid=ImgRaw&r=0" alt="" class="product-img">
+            <div class="new-product-card" id="card4">
+              <div class="img-div">
+                <div class="new-sticker"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7luQKWB_qzBxak9n193nqhinv-ZDYuR9Ecw&s" alt="" class="sticker"></div>
+                <img src="https://sarahblooms.com/wp-content/uploads/2017/11/DIY-spiced-soap-for-men-tutorial-1.jpg" alt="" class="product-img">
+              </div>
+              <div class="info-div">
+                <h4 class="product-title"> Protex</h4>
+                <small class="description">Protex hygen bath soap bar</small>
+                <div><h4 class="discount">was R35,90</h4> <h4 class="product-price">now R25,90</h4> </div>
+                
+              </div>
             </div>
-            <div class="info-div">
-              <h4 class="product-title"> Protex</h4>
-              <small class="description">Protex hygen bath soap bar</small>
-              <div><h4 class="discount">was R35,90</h4> <h4 class="product-price">now R25,90</h4> </div>
-            </div>
-          </div>
-          <div class="new-product-card" id="card4">
-            <div class="img-div">
-              <div class="new-sticker"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7luQKWB_qzBxak9n193nqhinv-ZDYuR9Ecw&s" alt="" class="sticker"></div>
-              <img src="https://sarahblooms.com/wp-content/uploads/2017/11/DIY-spiced-soap-for-men-tutorial-1.jpg" alt="" class="product-img">
-            </div>
-            <div class="info-div">
-              <h4 class="product-title"> Protex</h4>
-              <small class="description">Protex hygen bath soap bar</small>
-              <div><h4 class="discount">was R35,90</h4> <h4 class="product-price">now R25,90</h4> </div>
-              
-            </div>
-          </div>
-          
-        </figure>
+            
+          </figure>
+        </div>
+ 
       </div>
     </div>
 

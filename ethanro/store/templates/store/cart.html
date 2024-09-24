@@ -5,7 +5,7 @@
     <div class="product-page-container">
       <div class="container-product">
         <figure>
-          <div class="product-card product-view-card">
+          <div class="product-card product-view-card products-cart">
             {% if cartItems %}
             
               {% for product in cartItems %}
@@ -13,7 +13,9 @@
                 <img src="{{product.imageUrl}}" alt="" class="product-cart-img">
                 <h4 class="product-cart-title">{{product.title}}</h4>
                 <h4 class="product-cart-price">R{{product.price}}</h4>
-                <form action="">
+                <form action="{% url 'remove' %}" mathod="post">
+                  {% csrf_token %}
+                  <input type="hidden" name="item" value="{{product.id}}">
                   <input type="submit" class="product-cart-button glass-button" value="remove">
                 </form>
               </div>

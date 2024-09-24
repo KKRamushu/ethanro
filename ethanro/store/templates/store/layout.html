@@ -4,6 +4,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="{% static 'store/styles.css' %}" rel="stylesheet" >
   <script src="{% static 'store/script.js' %}"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
@@ -20,6 +21,13 @@
         <button class="search-button" type="submit"><img class="search-icon" src="https://cdn-icons-png.flaticon.com/128/10469/10469570.png" alt=""></button>
       </form>
     </div>
+    <div class="menu">
+      <div class="ham-menu">
+        <span class="menu-bar a"></span>
+        <span class="menu-bar b"></span>
+        <span class="menu-bar c"></span>
+      </div>
+    </div>
     <div class="nav-links">
       <a href="{% url 'index' %}#home" class="nav-link">Home</a>
       <a href="{% url 'index' %}#new" class="nav-link">New</a>
@@ -27,6 +35,20 @@
       <a href="{% url 'cart' %}" class="nav-link">inCart</a>
       <a href="{% url 'index' %}#about-us" class="nav-link">about us</a>
     </div>
+  </div>
+
+  <div class="menu-div">
+    <div class="menu-link">
+      <form class="search-form" action="" method="post">
+      <input class="seach-text-input" type="text" name="search" id="">
+      <button class="search-button" type="submit"><img class="search-icon" src="https://cdn-icons-png.flaticon.com/128/10469/10469570.png" alt=""></button>
+    </form>
+    </div>
+    <a href="index.html#home" class="nav-link menu-link">Home</a>
+    <a href="index.html#new" class="nav-link menu-link">New</a>
+    <a href="index.html#spacial" class="nav-link menu-link">Special</a>
+    <a href="cart.html" class="nav-link menu-link">Cart</a>
+    <a href="index.html#about-us" class="nav-link menu-link">about us</a>
   </div>
 
   <div class="contacts-bar">
