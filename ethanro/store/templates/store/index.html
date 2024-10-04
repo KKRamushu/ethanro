@@ -11,7 +11,8 @@
       </div>
       
       <div class="products">
-        <button class="slider-buttons prev">prev</button>
+        
+        <button class="slider-buttons nxt nxt-product"><div class="errow right"></button>
         <div class="slider-holder">
           <figure class="slide-track">
             {% for product in products %}
@@ -30,8 +31,7 @@
             {% endfor %}
           </figure>
         </div>
-        
-        <button class="slider-buttons nxt">next</button>
+        <button class="slider-buttons prev prev-product"><div class="errow left"></button>    
       </div>
     </div>
 
@@ -39,8 +39,9 @@
 
     <div class="container-page2" id="new">
       <div class="new-products">
+        <button class="slider-buttons prev-new"><div class="errow left"></button>
         <div class="slider-holder">
-          <figure class="slide-track">
+          <figure class="new-slide-track">
             {% for product in products|slice:"0:3" %}
             <a href="{% url 'product' item=product.title %}">
               <div class="new-product-card" id="card1">
@@ -58,13 +59,12 @@
             {% endfor %}
           </figure>
         </div>
+        <button class="slider-buttons nxt-new"><div class="errow right"></button>
       </div>
 
       <div class="new-note-div">
         <p class="new-note">
-          We're thrilled to introduce our latest creations, designed to elevate your bathing routine to new heights. <br>
-          Explore our new scents and innovative formulas, and find the perfect addition to your self-care regimen. <br>
-          Embrace the freshness and indulge in the quality you deserve. Your skin will thank you!
+          We're thrilled to introduce our latest creations, designed to elevate your bathing routine to new heights.
         </p>
       </div>
 
@@ -79,9 +79,9 @@
           That's why we're excited to offer you exclusive discounts on our premium products.
         </p>
       </div>
-      <div class="special-products">
+      <div class="new-products special-products">
         <div class="slider-holder">
-          <figure class="slide-track">
+          <figure class="slide-track special-slide-track">
             <div class="new-product-card" id="card1">
               <div class="img-div">
                 <div class="new-sticker"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7luQKWB_qzBxak9n193nqhinv-ZDYuR9Ecw&s" alt="" class="sticker"></div>

@@ -49,6 +49,22 @@ a{
 }
 
 .menu-div{
+ 
+  position: absolute;
+  top: 6.5em;
+  right: 0;
+  margin: 5px;
+  width: 18em;
+  height: auto;
+  border-radius: 5px;
+  background: var(--primary-color-lite);
+  box-shadow: -2px 15px 10px var(--primary-shadow) ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: transform 0.6s ease-in-out;
   display: none;
 }
 
@@ -268,7 +284,7 @@ figure{
   
 }
 
-.slide-track{
+.slide-track, .new-slide-track{
   position: relative;
   left: 0px;
   transition: transform 0.6s ease-in-out;
@@ -597,13 +613,33 @@ figure{
 .slider-buttons:hover{
   background: var(--slider-button-hover);
 }
-.prev{
+.prev, .prev-new{
   position: absolute;
   left: 25px;
 }
-.nxt{
+.nxt, .nxt-new{
   position: absolute;
   right: 25px;
+}
+.errow{
+  height: 25px;
+  width: 25px;
+  border: 5px solid var(--text-color);
+  border-width: 5px 5px 0 0;
+  
+}
+.left{
+  transform: rotate(-135deg) translate(-50%,50%);
+}
+.right{
+  transform: rotate(45deg) translate(-0%,0%);
+}
+.slider-buttons:hover{
+  background: var(--slider-button-hover);
+}
+.prev, .prev-new{
+  position: absolute;
+  left: 25px;
 }
 
 /*****************************************************************/
@@ -835,15 +871,24 @@ figure{
     backdrop-filter: blur(3px);
   }
 
+  .contacts-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 98%;
+    height: auto;
+    position: absolute;
+    bottom: 1em;
+    z-index: 10;
+  }
   .contacts-bar{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    bottom: 2.5em;
-    left: 4.5em;
+    position: relative;
     width: 14em;
     height: 35px;
+    margin-left: auto;
     background: rgba(255, 255, 255, 0.1);
     border: 2px solid rgba(255, 255, 255, 0.2);
     border-left: 2px solid rgba(255, 255, 255, 0.5);
@@ -869,13 +914,13 @@ figure{
 
   /****page 2****/
 
-  .new-products{
+  .new-products, .special-products{
   
     top: 4em;
     width: 90%;
   }
 
-  .new-note-div{
+  .new-note-div, .spacial-note-div{
     position: absolute;
     top: 8em;
     left: 1em;
@@ -884,4 +929,56 @@ figure{
   .new-product-card{
     width: 16em;
   }
+  .special-products{
+    position: absolute;
+  }
+
+
+
+  /*******************************Poduct page ********************************/
+
+.product-page-container{
+  display: flex;
+  margin: auto;
+}
+
+.container-product{
+
+  height: 32em;
+  width: 21em;
+  position: relative;
+  top: 0px;
+
+
+}
+
+.product-view-card{
+  width: 20em;
+  height: 29em;
+  margin-left: auto;
+  margin-top: auto;
+
+}
+
+.product-view-img-div, .product-details{
+  width: 19em;
+  height: 19em;
+  margin-top: 10px;
+}
+
+.product-view-img{
+  width: 19em;
+  height: 19em;
+}
+
+.product-details{
+  width: 19em;
+  height: 25em;
+  margin: auto;
+
+}
+
+.glass-button:hover{
+  background: var(--glass-button-hover);
+}
 }

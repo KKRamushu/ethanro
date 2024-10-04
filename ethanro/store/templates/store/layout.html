@@ -32,52 +32,54 @@
       <a href="{% url 'index' %}#home" class="nav-link">Home</a>
       <a href="{% url 'index' %}#new" class="nav-link">New</a>
       <a href="{% url 'index' %}#spacial" class="nav-link">Special</a>
-      <a href="{% url 'cart' %}" class="nav-link">inCart</a>
+
       <a href="{% url 'index' %}#about-us" class="nav-link">about us</a>
     </div>
   </div>
 
   <div class="menu-div">
     <div class="menu-link">
-      <form class="search-form" action="" method="post">
+      <form class="search-form" action="{% url 'search' %}" method="post">
+        {% csrf_token %}
       <input class="seach-text-input" type="text" name="search" id="">
-      <button class="search-button" type="submit"><img class="search-icon" src="https://cdn-icons-png.flaticon.com/128/10469/10469570.png" alt=""></button>
+      <button class="search-button menu-clear" type="submit"><img class="search-icon" src="https://cdn-icons-png.flaticon.com/128/10469/10469570.png" alt=""></button>
     </form>
     </div>
-    <a href="index.html#home" class="nav-link menu-link">Home</a>
-    <a href="index.html#new" class="nav-link menu-link">New</a>
-    <a href="index.html#spacial" class="nav-link menu-link">Special</a>
-    <a href="cart.html" class="nav-link menu-link">Cart</a>
-    <a href="index.html#about-us" class="nav-link menu-link">about us</a>
+    <a href="{% url 'index' %}#home" class="nav-link menu-link menu-clear">Home</a>
+    <a href="{% url 'index' %}#new" class="nav-link menu-link menu-clear">New</a>
+    <a href="{% url 'index' %}#spacial" class="nav-link menu-link menu-clear">Special</a>
+    <a href="{% url 'index' %}#about-us" class="nav-link menu-link menu-clear">about us</a>
   </div>
 
-  <div class="contacts-bar">
+  <div class="contacts-container">
+    <div class="contacts-bar">
 
-    <a href="" class="nav-link">
-      <div class="media-img">
-        <img class="media-img icon" src="https://cdn-icons-png.flaticon.com/128/11516/11516211.png" alt="">
-      </div>
-    </a>
-    <a href="" class="nav-link">
-      <div class="media-img">
-        <img class="media-img icon" src="https://cdn-icons-png.flaticon.com/128/2504/2504903.png" alt="">
-      </div>
-    </a>
-    <a href="" class="nav-link">
-      <div class="media-img">
-        <img class="media-img icon" src="https://cdn-icons-png.flaticon.com/128/15707/15707820.png" alt="">
-      </div>
-    </a>
-    <a href="" class="nav-link">
-      <div class="media-img">
-        <img class="media-img icon" src="https://cdn-icons-png.flaticon.com/128/1409/1409946.png" alt="">
-      </div>
-    </a>
-    <a href="" class="nav-link">
-      <div class="media-img" >
-        <img class="media-img icon" src="https://cdn-icons-png.flaticon.com/128/733/733585.png" alt="">
-      </div>
-    </a>
+      <a href="mailto:kg.ramushu@gmail.com" class="nav-link">
+        <div class="media-img">
+          <img class="media-img icon" src="https://cdn-icons-png.flaticon.com/128/11516/11516211.png" alt="">
+        </div>
+      </a>
+      <a href="https://web.facebook.com/kholofelo.ramushu.7/" class="nav-link">
+        <div class="media-img">
+          <img class="media-img icon" src="https://cdn-icons-png.flaticon.com/128/2504/2504903.png" alt="">
+        </div>
+      </a>
+      <a href="http://wa.me/27799568526" class="nav-link">
+        <div class="media-img">
+          <img class="media-img icon" src="https://cdn-icons-png.flaticon.com/128/15707/15707820.png" alt="">
+        </div>
+      </a>
+      <a href="" class="nav-link">
+        <div class="media-img">
+          <img class="media-img icon" src="https://cdn-icons-png.flaticon.com/128/1409/1409946.png" alt="">
+        </div>
+      </a>
+      <a href="tel:+27799568526" class="nav-link">
+        <div class="media-img" >
+          <img class="media-img icon" src="https://cdn-icons-png.flaticon.com/128/733/733585.png" alt="">
+        </div>
+      </a>
+    </div>
   </div>
 
  {% block body %}
