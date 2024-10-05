@@ -284,13 +284,13 @@ figure{
   
 }
 
-.slide-track, .new-slide-track{
+.slide-track, .new-slide-track, .special-slide-track{
   position: relative;
   left: 0px;
   transition: transform 0.6s ease-in-out;
 }
 
-.product-card, .new-product-card{
+.product-card, .new-product-card, .special-product-card{
   position: relative;
   width: 14.5em;
   min-height: 100%;
@@ -613,11 +613,11 @@ figure{
 .slider-buttons:hover{
   background: var(--slider-button-hover);
 }
-.prev, .prev-new{
+.prev, .prev-new, .prev-special{
   position: absolute;
   left: 25px;
 }
-.nxt, .nxt-new{
+.nxt, .nxt-new, .nxt-special{
   position: absolute;
   right: 25px;
 }
@@ -637,7 +637,7 @@ figure{
 .slider-buttons:hover{
   background: var(--slider-button-hover);
 }
-.prev, .prev-new{
+.prev, .prev-new, .prev-special{
   position: absolute;
   left: 25px;
 }
@@ -854,7 +854,7 @@ figure{
     
   }
 
-  .product-card, .new-product-card{
+  .product-card, .new-product-card, .special-product-card{
     position: relative;
     width: 16em;
     min-height: 100%;

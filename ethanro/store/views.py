@@ -5,7 +5,7 @@ from django.urls import reverse
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 
-from .models import Product, Cart
+from .models import Product, Cart, Specials
 
 # Create your views here.
 

@@ -10,6 +10,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const newSlide = document.querySelector('.new-slide-track');
   const newCards = document.querySelectorAll('.new-product-card');
 
+  const prevButtonSpecial = document.querySelector('.prev-special');
+  const nxttButtonSpecial = document.querySelector('.nxt-special');
+  const specialSlide = document.querySelector('.special-slide-track');
+  const specialCards = document.querySelectorAll('.special-product-card');
+
   const menuOption = document.querySelectorAll('.menu-clear');
   const homePage = document.querySelector('.pages');
   const menu = document.querySelector(".menu-div");
@@ -80,7 +85,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
 
     nxtButtonNew.addEventListener('click',()=>{
-      alert(next);
+
       if (newIndex >= newTotalProducts){
         newSlide.style.transition = 'none';
         newIndex = 0;
@@ -88,7 +93,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
         setTimeout(() => {
           newSlide.style.transition = 'transform 0.6s ease-in-out';
           newIndex=0;
-          sliderScroll();
+          newSliderScroll();
+          alert(newTotalProducts);
         }, 0);
       }
       else{
@@ -98,12 +104,47 @@ document.addEventListener('DOMContentLoaded', ()=>{
     });
 
     prevButtonNew.addEventListener('click',()=>{
-      alert('prev');
       if(newIndex > 0){
         newIndex--;
-        sliderScroll();
+        newSliderScroll();
       }
     });
+
+     //-------Special slide--------
+     const specialCardWidth = specialCards[0].offsetWidth;
+     const specialTotalProducts = specialCards.length;
+     let specialIndex =0;
+
+   function specialSliderScroll(){
+     specialSlide.style.transition = 'transform 0.6s ease-in-out';
+     specialSlide.style.transform =`translateX(-${newIndex*newCardWidth}px)`;
+   }
+
+   nxttButtonSpecial.addEventListener('click',()=>{
+
+     if (specialIndex >= newTotalProducts){
+       specialSlideSlide.style.transition = 'none';
+       specialIndex = 0;
+       specialSlide.style.transform =`translateX(-${specialIndex*specialCardWidth}px)`;
+       setTimeout(() => {
+         specialSlide.style.transition = 'transform 0.6s ease-in-out';
+         specialIndex=0;
+         specialSliderScroll();
+         alert(specialTotalProducts);
+       }, 0);
+     }
+     else{
+       specialIndex++;
+       specialSliderScroll();
+     }
+   });
+
+   prevButtonSpecial.addEventListener('click',()=>{
+     if(specialIndex > 0){
+       specialIndex--;
+       specialSliderScroll();
+     }
+   });
   }
 
 });
