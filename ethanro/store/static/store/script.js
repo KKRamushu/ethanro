@@ -117,20 +117,18 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
    function specialSliderScroll(){
      specialSlide.style.transition = 'transform 0.6s ease-in-out';
-     specialSlide.style.transform =`translateX(-${newIndex*newCardWidth}px)`;
+     specialSlide.style.transform =`translateX(-${specialIndex*specialCardWidth}px)`;
    }
 
    nxttButtonSpecial.addEventListener('click',()=>{
-
      if (specialIndex >= newTotalProducts){
-       specialSlideSlide.style.transition = 'none';
+       specialSlide.style.transition = 'none';
        specialIndex = 0;
        specialSlide.style.transform =`translateX(-${specialIndex*specialCardWidth}px)`;
        setTimeout(() => {
          specialSlide.style.transition = 'transform 0.6s ease-in-out';
          specialIndex=0;
          specialSliderScroll();
-         alert(specialTotalProducts);
        }, 0);
      }
      else{

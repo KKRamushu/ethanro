@@ -858,7 +858,8 @@ figure{
     position: relative;
     width: 16em;
     min-height: 100%;
-    margin-right: 7px;
+    margin-left:2px ;
+    margin-right: auto;
     margin-top: auto;
     border-radius: 5px;
     display: flex;
@@ -926,14 +927,12 @@ figure{
     left: 1em;
   }
 
-  .new-product-card{
+  .new-product-card, .special-product-card{
     width: 16em;
   }
-  .special-products{
-    position: absolute;
-  }
 
 
+  /****page 3****/
 
   /*******************************Poduct page ********************************/
 
